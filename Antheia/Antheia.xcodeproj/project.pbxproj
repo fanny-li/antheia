@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0460C80F26A9DA4E0013739B /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460C80E26A9DA4E0013739B /* MenuView.swift */; };
 		22D70A9F26A327F5004E1E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D70A9E26A327F5004E1E6C /* AppDelegate.swift */; };
 		22D70AA126A327F5004E1E6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D70AA026A327F5004E1E6C /* SceneDelegate.swift */; };
 		22D70AA326A327F5004E1E6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D70AA226A327F5004E1E6C /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0460C80E26A9DA4E0013739B /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		22D70A9B26A327F5004E1E6C /* Antheia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Antheia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D70A9E26A327F5004E1E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22D70AA026A327F5004E1E6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				22D70A9E26A327F5004E1E6C /* AppDelegate.swift */,
 				22D70AA026A327F5004E1E6C /* SceneDelegate.swift */,
 				22D70AA226A327F5004E1E6C /* ContentView.swift */,
+				0460C80E26A9DA4E0013739B /* MenuView.swift */,
 				22D70AA426A327FA004E1E6C /* Assets.xcassets */,
 				22D70AA926A327FA004E1E6C /* LaunchScreen.storyboard */,
 				22D70AAC26A327FA004E1E6C /* Info.plist */,
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22D70A9F26A327F5004E1E6C /* AppDelegate.swift in Sources */,
+				0460C80F26A9DA4E0013739B /* MenuView.swift in Sources */,
 				22D70AA126A327F5004E1E6C /* SceneDelegate.swift in Sources */,
 				22D70AA326A327F5004E1E6C /* ContentView.swift in Sources */,
 			);
