@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22702C0826AB158100B79D8C /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22702C0726AB158100B79D8C /* SignUp.swift */; };
+		22702C0A26AB158F00B79D8C /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22702C0926AB158F00B79D8C /* Login.swift */; };
+		22702C3026AC659000B79D8C /* StartingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22702C2F26AC659000B79D8C /* StartingPage.swift */; };
+		22702C3226AC667900B79D8C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22702C3126AC667900B79D8C /* Helper.swift */; };
+		22702C3426AC673C00B79D8C /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22702C3326AC673C00B79D8C /* ViewRouter.swift */; };
 		22D70A9F26A327F5004E1E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D70A9E26A327F5004E1E6C /* AppDelegate.swift */; };
 		22D70AA126A327F5004E1E6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D70AA026A327F5004E1E6C /* SceneDelegate.swift */; };
 		22D70AA326A327F5004E1E6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D70AA226A327F5004E1E6C /* ContentView.swift */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22702C0726AB158100B79D8C /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		22702C0926AB158F00B79D8C /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		22702C2F26AC659000B79D8C /* StartingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingPage.swift; sourceTree = "<group>"; };
+		22702C3126AC667900B79D8C /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		22702C3326AC673C00B79D8C /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		22D70A9B26A327F5004E1E6C /* Antheia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Antheia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D70A9E26A327F5004E1E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22D70AA026A327F5004E1E6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,9 +69,14 @@
 				22D70A9E26A327F5004E1E6C /* AppDelegate.swift */,
 				22D70AA026A327F5004E1E6C /* SceneDelegate.swift */,
 				22D70AA226A327F5004E1E6C /* ContentView.swift */,
+				22702C3326AC673C00B79D8C /* ViewRouter.swift */,
+				22702C3126AC667900B79D8C /* Helper.swift */,
 				22D70AA426A327FA004E1E6C /* Assets.xcassets */,
 				22D70AA926A327FA004E1E6C /* LaunchScreen.storyboard */,
 				22D70AAC26A327FA004E1E6C /* Info.plist */,
+				22702C2F26AC659000B79D8C /* StartingPage.swift */,
+				22702C0726AB158100B79D8C /* SignUp.swift */,
+				22702C0926AB158F00B79D8C /* Login.swift */,
 				22D70AA626A327FA004E1E6C /* Preview Content */,
 			);
 			path = Antheia;
@@ -146,8 +161,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				22D70A9F26A327F5004E1E6C /* AppDelegate.swift in Sources */,
+				22702C3226AC667900B79D8C /* Helper.swift in Sources */,
+				22702C0A26AB158F00B79D8C /* Login.swift in Sources */,
+				22702C0826AB158100B79D8C /* SignUp.swift in Sources */,
 				22D70AA126A327F5004E1E6C /* SceneDelegate.swift in Sources */,
+				22702C3026AC659000B79D8C /* StartingPage.swift in Sources */,
 				22D70AA326A327F5004E1E6C /* ContentView.swift in Sources */,
+				22702C3426AC673C00B79D8C /* ViewRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
