@@ -9,7 +9,9 @@ import UIKit
 import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
+    @StateObject var viewRouter =  ViewRouter()
+    
     var window: UIWindow?
 
 
@@ -19,11 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-        let contentView = NavigationView{
-            ContentView()
-        }.navigationViewStyle(StackNavigationViewStyle())
-// similar to stack of cards style
-        
+        let contentView = ContentView(viewRouter: ViewRouter())
+//                                        .signUpPage)
+
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
