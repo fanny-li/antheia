@@ -9,6 +9,6 @@ import SwiftUI
 
 class ViewRouter: ObservableObject {
     
-    @Published var currentPage: Page = .signUpPage
+    @Published var currentPage: Page = .startingPage
     
 }
