@@ -8,21 +8,15 @@
 import SwiftUI
 
 struct SignUp : View {
-    
-    @StateObject var viewRouter: ViewRouter
-    
+        
     var body : some View {
         
-        Button(action: {
-            viewRouter.currentPage = .loginPage
-        }, label: {
-            Text("Button")
-        })
+        Text("sign up page").padding()
     }
 }
 
 struct SignUp_Preview: PreviewProvider {
     static var previews: some View {
-        SignUp(viewRouter: ViewRouter())
+        SignUp()
     }
 }
