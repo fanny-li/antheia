@@ -66,21 +66,21 @@ struct SignUp : View {
                         })
                     
                     
-                    
+                    HStack{
+                        Text("Already Member?").fontWeight(.bold).foregroundColor(Color(red: 0.35, green: 0.18, blue: 0.05))
+                        NavigationLink(
+                            destination: Login().navigationBarBackButtonHidden(true),
+                            label: {
+                                Text("Login").fontWeight(.bold).foregroundColor(.gray)
+                            })
+                    }
                     
                     
                     
                 }.padding().frame(maxHeight: .infinity, alignment: .top)
             }.overlay(
-                HStack{
-                    Text("Already Member?").fontWeight(.bold).foregroundColor(Color(red: 0.35, green: 0.18, blue: 0.05))
-                    NavigationLink(
-                        destination: Login().navigationBarBackButtonHidden(true),
-                        label: {
-                            Text("Login").fontWeight(.bold).foregroundColor(.gray)
-                        })
-                }
                 
+                Image("trees").resizable().aspectRatio(contentMode: .fit)
                 ,alignment: .bottom
             )
             
