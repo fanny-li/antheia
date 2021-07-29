@@ -19,6 +19,8 @@
 		22D70AA526A327FA004E1E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D70AA426A327FA004E1E6C /* Assets.xcassets */; };
 		22D70AA826A327FA004E1E6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D70AA726A327FA004E1E6C /* Preview Assets.xcassets */; };
 		22D70AAB26A327FA004E1E6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D70AA926A327FA004E1E6C /* LaunchScreen.storyboard */; };
+		F95142FB26B25062007213C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F95142FA26B25062007213C6 /* GoogleService-Info.plist */; };
+		FF8F1D92AC9C190CB18B09AB /* Pods_Antheia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D92AE1B1F877B6442C751F5 /* Pods_Antheia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,10 @@
 		22D70AA726A327FA004E1E6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		22D70AAA26A327FA004E1E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22D70AAC26A327FA004E1E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D92AE1B1F877B6442C751F5 /* Pods_Antheia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Antheia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		667D2755B0F6BBD837AE0C82 /* Pods-Antheia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antheia.release.xcconfig"; path = "Target Support Files/Pods-Antheia/Pods-Antheia.release.xcconfig"; sourceTree = "<group>"; };
+		7FC515264E603CCF48FE33CF /* Pods-Antheia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antheia.debug.xcconfig"; path = "Target Support Files/Pods-Antheia/Pods-Antheia.debug.xcconfig"; sourceTree = "<group>"; };
+		F95142FA26B25062007213C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +49,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF8F1D92AC9C190CB18B09AB /* Pods_Antheia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BCA8B2116BDD1D4214DBD01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D92AE1B1F877B6442C751F5 /* Pods_Antheia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		22D70A9226A327F4004E1E6C = {
 			isa = PBXGroup;
 			children = (
 				22D70A9D26A327F5004E1E6C /* Antheia */,
 				22D70A9C26A327F5004E1E6C /* Products */,
+				24E6D0F69018E4B80B912676 /* Pods */,
+				1BCA8B2116BDD1D4214DBD01 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +85,7 @@
 		22D70A9D26A327F5004E1E6C /* Antheia */ = {
 			isa = PBXGroup;
 			children = (
+				F95142FA26B25062007213C6 /* GoogleService-Info.plist */,
 				22D70A9E26A327F5004E1E6C /* AppDelegate.swift */,
 				22D70AA026A327F5004E1E6C /* SceneDelegate.swift */,
 				22D70AA226A327F5004E1E6C /* ContentView.swift */,
@@ -93,6 +111,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		24E6D0F69018E4B80B912676 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7FC515264E603CCF48FE33CF /* Pods-Antheia.debug.xcconfig */,
+				667D2755B0F6BBD837AE0C82 /* Pods-Antheia.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22D70AAF26A327FA004E1E6C /* Build configuration list for PBXNativeTarget "Antheia" */;
 			buildPhases = (
+				ED3857DE2353677517738B89 /* [CP] Check Pods Manifest.lock */,
 				22D70A9726A327F5004E1E6C /* Sources */,
 				22D70A9826A327F5004E1E6C /* Frameworks */,
 				22D70A9926A327F5004E1E6C /* Resources */,
+				F9DA25D8F8AA71372BF458E2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,12 +181,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				22D70AAB26A327FA004E1E6C /* LaunchScreen.storyboard in Resources */,
+				F95142FB26B25062007213C6 /* GoogleService-Info.plist in Resources */,
 				22D70AA826A327FA004E1E6C /* Preview Assets.xcassets in Resources */,
 				22D70AA526A327FA004E1E6C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ED3857DE2353677517738B89 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Antheia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9DA25D8F8AA71372BF458E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Antheia/Pods-Antheia-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Antheia/Pods-Antheia-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Antheia/Pods-Antheia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		22D70A9726A327F5004E1E6C /* Sources */ = {
@@ -307,6 +380,7 @@
 		};
 		22D70AB026A327FA004E1E6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FC515264E603CCF48FE33CF /* Pods-Antheia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -327,6 +401,7 @@
 		};
 		22D70AB126A327FA004E1E6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 667D2755B0F6BBD837AE0C82 /* Pods-Antheia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
