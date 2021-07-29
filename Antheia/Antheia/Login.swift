@@ -11,11 +11,13 @@ import SwiftUI
 struct Login : View {
     @State private var name = ""
     @State private var password = ""
+    
+//    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     var body: some View {
-        NavigationView{
+        
             
-            ZStack{
-                Rectangle().foregroundColor(Color(red: 0.98, green: 0.93, blue: 0.80)).edgesIgnoringSafeArea(.all)
+//            ZStack{
+//                Rectangle().foregroundColor(Color(red: 0.98, green: 0.93, blue: 0.80)).edgesIgnoringSafeArea(.all)
                 
                 VStack{
                     Text("Login").font(.system(size: 30)).fontWeight(.bold).foregroundColor(Color(red: 0.11, green: 0.26, blue: 0.20)).kerning(1.9).frame(maxWidth: .infinity, alignment: .topLeading)
@@ -36,29 +38,36 @@ struct Login : View {
                         Divider()
                     }).padding(.top, 40)
                     
-                    NavigationLink(
-                        destination: Text("Destination"),
-                        label: {
-                            Text("Login").font(.title3).fontWeight(.bold).foregroundColor(Color(red: 0.11, green: 0.26, blue: 0.20)).kerning(1.0).padding().background(Color(red: 0.91, green: 0.93, blue: 0.79).opacity(0.6)).cornerRadius(20).padding(.top, 40)
-                        })
-                    HStack{
-                        Text("Not a Member?").fontWeight(.bold).foregroundColor(Color(red: 0.35, green: 0.18, blue: 0.05))
-                        NavigationLink(
-                            destination: SignUp().navigationBarBackButtonHidden(true),
-                            label: {
-                                Text("Sign Up").fontWeight(.bold).foregroundColor(.gray)
-                            })
-                    }
+//                    NavigationLink(
+//                        destination: Text("Destination"),
+//                        label: {
+//                            Text("Login").font(.title3).fontWeight(.bold).foregroundColor(Color(red: 0.11, green: 0.26, blue: 0.20)).kerning(1.0).padding().background(Color(red: 0.91, green: 0.93, blue: 0.79).opacity(0.6)).cornerRadius(20).padding(.top, 40)
+//                        })
+//                    HStack{
+//                        Text("Not a Member?").fontWeight(.bold).foregroundColor(Color(red: 0.35, green: 0.18, blue: 0.05))
+//                        Button(action: {
+//                            self.mode.wrappedValue.dismiss()
+//                        }, label: {
+//                            Text("Sign Up").fontWeight(.bold).foregroundColor(.gray)
+//
+//                        })
+                        
+                        //                        NavigationLink(
+//                            destination: SignUp().navigationBarBackButtonHidden(false),
+//                            label: {
+//
+//                            })
+                    
                     
                 }.padding().frame(maxHeight: .infinity, alignment: .top)
                 
-            }.overlay(
-                Image("trees").resizable().aspectRatio(contentMode: .fit)
-                
-                ,alignment: .bottom 
-            )
+//            }.overlay(
+//                Image("trees").resizable().aspectRatio(contentMode: .fit)
+//
+//                ,alignment: .bottom
+//            )
             
-        }
+        
     }
 }
 

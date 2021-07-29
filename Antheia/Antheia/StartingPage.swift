@@ -19,18 +19,23 @@ struct StartingPage : View {
                 ZStack{
                     Circle().foregroundColor(Color(red: 0.92, green: 0.82, blue: 0.72)).scaleEffect(0.8)
                     VStack{
-                        
-                        // Sign Up Button
                         NavigationLink(
-                            destination: SignUp().navigationBarHidden(true),
-                             label: {
-                            Text("Sign Up").foregroundColor(.black).font(.title3).fontWeight(.semibold).multilineTextAlignment(.center).padding(.all, 10).padding(.horizontal, 50).background(Color(red: 0.87, green: 0.59, blue: 0.59).opacity(0.8)).cornerRadius(15)
-                        }).padding(.bottom, 20)
-                        
-                        // Login Button
-                        NavigationLink(destination: Login().navigationBarHidden(true), label: {
-                            Text("Login").foregroundColor(.black).font(.title3).fontWeight(.semibold).multilineTextAlignment(.center).padding(.all, 10).padding(.horizontal, 62).background(Color(red: 0.87, green: 0.59, blue: 0.59).opacity(0.8)).cornerRadius(15)
-                        })
+                            destination: Transition().navigationBarHidden(true),
+                            label: {
+                                Text("Get Started").foregroundColor(.black).font(.title3).fontWeight(.semibold).multilineTextAlignment(.center).padding(.all, 10).padding(.horizontal, 50).background(Color(red: 0.87, green: 0.59, blue: 0.59).opacity(0.8)).cornerRadius(15)
+                               
+                            })
+                        // Sign Up Button
+//                        NavigationLink(
+//                            destination: SignUp().navigationBarHidden(false),
+//                             label: {
+//                            Text("Sign Up").foregroundColor(.black).font(.title3).fontWeight(.semibold).multilineTextAlignment(.center).padding(.all, 10).padding(.horizontal, 50).background(Color(red: 0.87, green: 0.59, blue: 0.59).opacity(0.8)).cornerRadius(15)
+//                        }).padding(.bottom, 20)
+//
+//                        // Login Button
+//                        NavigationLink(destination: Login().navigationBarHidden(false), label: {
+//                            Text("Login").foregroundColor(.black).font(.title3).fontWeight(.semibold).multilineTextAlignment(.center).padding(.all, 10).padding(.horizontal, 62).background(Color(red: 0.87, green: 0.59, blue: 0.59).opacity(0.8)).cornerRadius(15)
+//                        })
                     }
                 }.edgesIgnoringSafeArea(.all)
             
