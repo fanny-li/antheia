@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Transition : View{
+struct BaseTransition : View{
     @State var showSignUp = true
     var body : some View {
         ZStack{
@@ -47,8 +47,8 @@ struct Transition : View{
     }
 }
     
-    struct Transition_Preview: PreviewProvider {
+    struct BaseTransition_Preview: PreviewProvider {
         static var previews: some View {
-            Transition()
+            BaseTransition()
         }
     }
