@@ -21,7 +21,9 @@ struct BaseTransition : View{
                 Login().transition(.move(edge: .trailing))
             }
             VStack{
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Button(action: {
+                    
+                }, label: {
                     Text(showSignUp ? "Sign Up" : "Login").font(.title3).fontWeight(.bold).foregroundColor(Color(red: 0.11, green: 0.26, blue: 0.20)).kerning(1.0).padding().background(Color(red: 0.91, green: 0.93, blue: 0.79).opacity(0.6)).cornerRadius(20)
                 })
                 HStack{

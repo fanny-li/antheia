@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StartingPage : View {
-    
+ 
     
     var body: some View {
         NavigationView{

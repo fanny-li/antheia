@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SignUp : View {
     
+    @ObservedObject var user = UserInfo(name: "James Diamond", age: 24)
+    
     @State private var name = ""
     @State private var email = ""
     @State private var birthdate = Date()
@@ -27,7 +29,7 @@ struct SignUp : View {
                     VStack(alignment: .leading, spacing: 8, content: {
                         Text("Full Name").font(.system(size: 20)).fontWeight(.bold).foregroundColor(Color(red: 0.35, green: 0.18, blue: 0.05)).kerning(1.0)
                         
-                        TextField("James Diamond", text: $name).font(.system(size: 18, weight: .semibold)).foregroundColor(.black)
+                        TextField("James Diamond", text: $user.name).font(.system(size: 18, weight: .semibold)).foregroundColor(.black)
                         
                         Divider()
                     }).padding(.top, 40)
