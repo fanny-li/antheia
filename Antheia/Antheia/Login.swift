@@ -59,7 +59,7 @@ struct Login : View {
 //                            })
                     
                     
-                }.padding().frame(maxHeight: .infinity, alignment: .top)
+                }.padding().frame(maxHeight: 400, alignment: .top)
                 
 //            }.overlay(
 //                Image("trees").resizable().aspectRatio(contentMode: .fit)
