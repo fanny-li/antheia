@@ -8,6 +8,7 @@
 import Foundation
 
 class UserInfo: ObservableObject {
+    
     internal init(name: String, age: Int){
         self.name = name
         self.age = age
@@ -16,3 +17,5 @@ class UserInfo: ObservableObject {
     @Published var name:String
     @Published var age: Int
 }
+
+// test
