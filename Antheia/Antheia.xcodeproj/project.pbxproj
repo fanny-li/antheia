@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		22D70AA826A327FA004E1E6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D70AA726A327FA004E1E6C /* Preview Assets.xcassets */; };
 		22D70AAB26A327FA004E1E6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D70AA926A327FA004E1E6C /* LaunchScreen.storyboard */; };
 		F95142FB26B25062007213C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F95142FA26B25062007213C6 /* GoogleService-Info.plist */; };
+		F9F7C24A26BB2F8C00A6A02E /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F7C24926BB2F8C00A6A02E /* Leaderboard.swift */; };
 		FF8F1D92AC9C190CB18B09AB /* Pods_Antheia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D92AE1B1F877B6442C751F5 /* Pods_Antheia.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		667D2755B0F6BBD837AE0C82 /* Pods-Antheia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antheia.release.xcconfig"; path = "Target Support Files/Pods-Antheia/Pods-Antheia.release.xcconfig"; sourceTree = "<group>"; };
 		7FC515264E603CCF48FE33CF /* Pods-Antheia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antheia.debug.xcconfig"; path = "Target Support Files/Pods-Antheia/Pods-Antheia.debug.xcconfig"; sourceTree = "<group>"; };
 		F95142FA26B25062007213C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F9F7C24926BB2F8C00A6A02E /* Leaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				22702C0726AB158100B79D8C /* SignUp.swift */,
 				22702C0926AB158F00B79D8C /* Login.swift */,
 				22702C3526B23FC000B79D8C /* Transition.swift */,
+				F9F7C24926BB2F8C00A6A02E /* Leaderboard.swift */,
 				22D70AA626A327FA004E1E6C /* Preview Content */,
 			);
 			path = Antheia;
@@ -117,7 +120,6 @@
 				7FC515264E603CCF48FE33CF /* Pods-Antheia.debug.xcconfig */,
 				667D2755B0F6BBD837AE0C82 /* Pods-Antheia.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -245,6 +247,7 @@
 				22D70AA126A327F5004E1E6C /* SceneDelegate.swift in Sources */,
 				22702C3026AC659000B79D8C /* StartingPage.swift in Sources */,
 				22D70AA326A327F5004E1E6C /* ContentView.swift in Sources */,
+				F9F7C24A26BB2F8C00A6A02E /* Leaderboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
