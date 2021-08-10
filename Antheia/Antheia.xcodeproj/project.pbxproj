@@ -25,6 +25,8 @@
 		22D70AA526A327FA004E1E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D70AA426A327FA004E1E6C /* Assets.xcassets */; };
 		22D70AA826A327FA004E1E6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D70AA726A327FA004E1E6C /* Preview Assets.xcassets */; };
 		22D70AAB26A327FA004E1E6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D70AA926A327FA004E1E6C /* LaunchScreen.storyboard */; };
+		F95142FB26B25062007213C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F95142FA26B25062007213C6 /* GoogleService-Info.plist */; };
+		F9F7C24A26BB2F8C00A6A02E /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F7C24926BB2F8C00A6A02E /* Leaderboard.swift */; };
 		FF8F1D92AC9C190CB18B09AB /* Pods_Antheia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D92AE1B1F877B6442C751F5 /* Pods_Antheia.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		5D92AE1B1F877B6442C751F5 /* Pods_Antheia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Antheia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		667D2755B0F6BBD837AE0C82 /* Pods-Antheia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antheia.release.xcconfig"; path = "Target Support Files/Pods-Antheia/Pods-Antheia.release.xcconfig"; sourceTree = "<group>"; };
 		7FC515264E603CCF48FE33CF /* Pods-Antheia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antheia.debug.xcconfig"; path = "Target Support Files/Pods-Antheia/Pods-Antheia.debug.xcconfig"; sourceTree = "<group>"; };
+		F95142FA26B25062007213C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F9F7C24926BB2F8C00A6A02E /* Leaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 				22702C0726AB158100B79D8C /* SignUp.swift */,
 				2254517726BB0859007D4E45 /* UserInfo.swift */,
 				22702C0926AB158F00B79D8C /* Login.swift */,
+				22702C3526B23FC000B79D8C /* Transition.swift */,
+				F9F7C24926BB2F8C00A6A02E /* Leaderboard.swift */,
 				22702C3526B23FC000B79D8C /* BaseTransition.swift */,
 				22702C3726B2FC5F00B79D8C /* UserProfile.swift */,
 				2254517B26BEF504007D4E45 /* GroupPage.swift */,
@@ -265,6 +271,7 @@
 				22702C3026AC659000B79D8C /* StartingPage.swift in Sources */,
 				2254517826BB0859007D4E45 /* UserInfo.swift in Sources */,
 				22D70AA326A327F5004E1E6C /* ContentView.swift in Sources */,
+				F9F7C24A26BB2F8C00A6A02E /* Leaderboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
