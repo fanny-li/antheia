@@ -8,7 +8,7 @@
 import SwiftUI
 struct OpenGroupPage: View{
     
-    @State var friendData: [CGFloat] = [20, 100, 80, 50, 130, 95, 180]
+    @State var friendData: [CGFloat] = [20, 100, 80, 50, 130, 95]
     
     var body: some View{
         ZStack{
@@ -29,9 +29,12 @@ struct OpenGroupPage: View{
                 
                 Text("Leaderboard").fontWeight(.medium).foregroundColor(Color(red: 0.25, green: 0.25, blue: 0.25)).kerning(1.0).frame(maxWidth: 310, alignment: .leading)
                 HStack(spacing: 2){
-                    ForEach(0..<7) { index in
-                        BarView2(value: friendData[index])
-                    }
+                    BarView2(value: friendData[0], name: "Fanny")
+                    BarView2(value: friendData[1], name: "Amy")
+                    BarView2(value: friendData[2], name: "Erica")
+                    BarView2(value: friendData[3], name: "Kelly")
+                    BarView2(value: friendData[4], name: "Pravin")
+                    BarView2(value: friendData[5], name: "Logan")
                 }.padding(10).background(Color.white).cornerRadius(20)
                 
           
@@ -68,6 +71,7 @@ struct OpenGroupPage: View{
 struct BarView2: View{
     
     var value: CGFloat
+    var name: String
     
     var body: some View {
         VStack{
@@ -76,7 +80,7 @@ struct BarView2: View{
                 Capsule().frame(width: 25, height: 200).foregroundColor(Color(red: 0.94, green: 0.94, blue: 0.94))
                 Capsule().frame(width: 25, height: value).foregroundColor(Color(red: 0.29, green: 0.58, blue: 0.38))
             }
-            Text("Name").padding(.top, 8)
+            Text(name).padding(.top, 8)
         }
     }
 }
