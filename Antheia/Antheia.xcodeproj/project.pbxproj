@@ -3,37 +3,42 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		04350B1826AF7FBD00579013 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04350B1726AF7FBD00579013 /* HomeView.swift */; };
 		0460C80F26A9DA4E0013739B /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460C80E26A9DA4E0013739B /* MenuView.swift */; };
+		2254517826BB0859007D4E45 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254517726BB0859007D4E45 /* UserInfo.swift */; };
+		2254517A26BB6AFB007D4E45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2254517926BB6AFB007D4E45 /* GoogleService-Info.plist */; };
+		2254517C26BEF504007D4E45 /* GroupPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254517B26BEF504007D4E45 /* GroupPage.swift */; };
+		2254517E26C039D7007D4E45 /* OpenGroupPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254517D26C039D7007D4E45 /* OpenGroupPage.swift */; };
 		22702C0826AB158100B79D8C /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22702C0726AB158100B79D8C /* SignUp.swift */; };
 		22702C0A26AB158F00B79D8C /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22702C0926AB158F00B79D8C /* Login.swift */; };
 		22702C3026AC659000B79D8C /* StartingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22702C2F26AC659000B79D8C /* StartingPage.swift */; };
 		22702C3626B23FC000B79D8C /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22702C3526B23FC000B79D8C /* BaseTransition.swift */; };
 		22702C3826B2FC5F00B79D8C /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22702C3726B2FC5F00B79D8C /* UserProfile.swift */; };
-		22702C3A26B633A300B79D8C /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22702C3926B633A300B79D8C /* UserInfo.swift */; };
 		22D70A9F26A327F5004E1E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D70A9E26A327F5004E1E6C /* AppDelegate.swift */; };
 		22D70AA126A327F5004E1E6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D70AA026A327F5004E1E6C /* SceneDelegate.swift */; };
 		22D70AA326A327F5004E1E6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D70AA226A327F5004E1E6C /* ContentView.swift */; };
 		22D70AA526A327FA004E1E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D70AA426A327FA004E1E6C /* Assets.xcassets */; };
 		22D70AA826A327FA004E1E6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D70AA726A327FA004E1E6C /* Preview Assets.xcassets */; };
 		22D70AAB26A327FA004E1E6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D70AA926A327FA004E1E6C /* LaunchScreen.storyboard */; };
-		F95142FB26B25062007213C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F95142FA26B25062007213C6 /* GoogleService-Info.plist */; };
 		FF8F1D92AC9C190CB18B09AB /* Pods_Antheia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D92AE1B1F877B6442C751F5 /* Pods_Antheia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04350B1726AF7FBD00579013 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0460C80E26A9DA4E0013739B /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		2254517726BB0859007D4E45 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		2254517926BB6AFB007D4E45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2254517B26BEF504007D4E45 /* GroupPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPage.swift; sourceTree = "<group>"; };
+		2254517D26C039D7007D4E45 /* OpenGroupPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenGroupPage.swift; sourceTree = "<group>"; };
 		22702C0726AB158100B79D8C /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		22702C0926AB158F00B79D8C /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		22702C2F26AC659000B79D8C /* StartingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingPage.swift; sourceTree = "<group>"; };
 		22702C3526B23FC000B79D8C /* BaseTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		22702C3726B2FC5F00B79D8C /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
-		22702C3926B633A300B79D8C /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		22D70A9B26A327F5004E1E6C /* Antheia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Antheia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D70A9E26A327F5004E1E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22D70AA026A327F5004E1E6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +50,6 @@
 		5D92AE1B1F877B6442C751F5 /* Pods_Antheia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Antheia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		667D2755B0F6BBD837AE0C82 /* Pods-Antheia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antheia.release.xcconfig"; path = "Target Support Files/Pods-Antheia/Pods-Antheia.release.xcconfig"; sourceTree = "<group>"; };
 		7FC515264E603CCF48FE33CF /* Pods-Antheia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antheia.debug.xcconfig"; path = "Target Support Files/Pods-Antheia/Pods-Antheia.debug.xcconfig"; sourceTree = "<group>"; };
-		F95142FA26B25062007213C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +93,7 @@
 		22D70A9D26A327F5004E1E6C /* Antheia */ = {
 			isa = PBXGroup;
 			children = (
-				F95142FA26B25062007213C6 /* GoogleService-Info.plist */,
+				2254517926BB6AFB007D4E45 /* GoogleService-Info.plist */,
 				22D70A9E26A327F5004E1E6C /* AppDelegate.swift */,
 				22D70AA026A327F5004E1E6C /* SceneDelegate.swift */,
 				22D70AA226A327F5004E1E6C /* ContentView.swift */,
@@ -100,10 +104,12 @@
 				22D70AAC26A327FA004E1E6C /* Info.plist */,
 				22702C2F26AC659000B79D8C /* StartingPage.swift */,
 				22702C0726AB158100B79D8C /* SignUp.swift */,
+				2254517726BB0859007D4E45 /* UserInfo.swift */,
 				22702C0926AB158F00B79D8C /* Login.swift */,
 				22702C3526B23FC000B79D8C /* BaseTransition.swift */,
 				22702C3726B2FC5F00B79D8C /* UserProfile.swift */,
-				22702C3926B633A300B79D8C /* UserInfo.swift */,
+				2254517B26BEF504007D4E45 /* GroupPage.swift */,
+				2254517D26C039D7007D4E45 /* OpenGroupPage.swift */,
 				22D70AA626A327FA004E1E6C /* Preview Content */,
 			);
 			path = Antheia;
@@ -123,7 +129,6 @@
 				7FC515264E603CCF48FE33CF /* Pods-Antheia.debug.xcconfig */,
 				667D2755B0F6BBD837AE0C82 /* Pods-Antheia.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -187,7 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22D70AAB26A327FA004E1E6C /* LaunchScreen.storyboard in Resources */,
-				F95142FB26B25062007213C6 /* GoogleService-Info.plist in Resources */,
+				2254517A26BB6AFB007D4E45 /* GoogleService-Info.plist in Resources */,
 				22D70AA826A327FA004E1E6C /* Preview Assets.xcassets in Resources */,
 				22D70AA526A327FA004E1E6C /* Assets.xcassets in Resources */,
 			);
@@ -242,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2254517C26BEF504007D4E45 /* GroupPage.swift in Sources */,
 				22702C3626B23FC000B79D8C /* BaseTransition.swift in Sources */,
 				22D70A9F26A327F5004E1E6C /* AppDelegate.swift in Sources */,
 				22702C3826B2FC5F00B79D8C /* UserProfile.swift in Sources */,
@@ -249,9 +255,10 @@
 				04350B1826AF7FBD00579013 /* HomeView.swift in Sources */,
 				22702C0A26AB158F00B79D8C /* Login.swift in Sources */,
 				22702C0826AB158100B79D8C /* SignUp.swift in Sources */,
+				2254517E26C039D7007D4E45 /* OpenGroupPage.swift in Sources */,
 				22D70AA126A327F5004E1E6C /* SceneDelegate.swift in Sources */,
 				22702C3026AC659000B79D8C /* StartingPage.swift in Sources */,
-				22702C3A26B633A300B79D8C /* UserInfo.swift in Sources */,
+				2254517826BB0859007D4E45 /* UserInfo.swift in Sources */,
 				22D70AA326A327F5004E1E6C /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,20 +2,29 @@
 //  UserInfo.swift
 //  Antheia
 //
-//  Created by Fanny Li on 7/31/21.
+//  Created by Fanny Li on 8/4/21.
 //
 
 import Foundation
+import Combine
 
 class UserInfo: ObservableObject {
-    
-    internal init(name: String, age: Int){
-        self.name = name
-        self.age = age
+    @Published var name: String{
+        didSet {
+            UserDefaults.standard.set(name, forKey: "name")
+            
+        }
     }
     
-    @Published var name:String
-    @Published var age: Int
+    @Published var age: String{
+        didSet{
+            UserDefaults.standard.set(age, forKey: "age")
+        }
+    }
+    
+    
+    init(){
+        self.name = UserDefaults.standard.object(forKey: "name") as? String ?? ""
+        self.age = UserDefaults.standard.object(forKey: "age") as? String ?? ""
+    }
 }
-
-// test

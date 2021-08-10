@@ -12,9 +12,7 @@ struct UserProfile: View {
     @State var isShowingImagePicker = false
     @State var tempImage = UIImage()
     
-    @State var name = "James Diamond"
-    @State var age = 24
-    
+   @ObservedObject var userInfo = UserInfo()
     
     // Bar Graph Values
     @State var pickerSelectionItem = 0
@@ -31,6 +29,7 @@ struct UserProfile: View {
             VStack{
                 // User Information
                 HStack(alignment: .top, content: {
+                    Spacer()
                     VStack{
                         Image(uiImage: tempImage).resizable().scaledToFill().frame(width: 120, height: 120).border(Color.black, width: 1).clipped()
                         Button(action: {
@@ -41,17 +40,56 @@ struct UserProfile: View {
                             ImagePickerView(isPresented: self.$isShowingImagePicker, selectedImage: self.$tempImage)
                         })
                     }
-                    
+                    Spacer()
                     VStack{
-                        Text(name).font(.headline).kerning(1.0).padding()
-                        Text("Age: \(age)").font(.headline).kerning(1.0).padding()
+                        Text(userInfo.name).font(.headline).kerning(1.0).padding()
+                        Text("Age: \(userInfo.age)").font(.headline).kerning(1.0).padding()
                         
                     }
+                    Spacer()
                     
                 
                 }).padding(.top, 40)
-                Spacer()
+  
                 
+                ZStack{
+                    Rectangle().foregroundColor(.white).frame(width: 350, height: 120, alignment: .center).cornerRadius(12)
+                    VStack{
+                        Text("Transportation").font(.system(size: 18)).bold().foregroundColor(.gray).padding(.top, 10)
+                        Spacer()
+                        Text(Date(), style: .date)
+                        Spacer()
+                        Button(action: {
+                            self.isShowingImagePicker.toggle()
+                        }, label: {
+                            Text("Upload Proof")
+                        }).sheet(isPresented: $isShowingImagePicker, content: {
+                            ImagePickerView(isPresented: self.$isShowingImagePicker, selectedImage: self.$tempImage)
+                        })
+                        Spacer()
+                        
+                    }
+                }.padding(.bottom)
+                
+                ZStack{
+                    Rectangle().foregroundColor(.white).frame(width: 350, height: 120, alignment: .center).cornerRadius(12)
+                    VStack{
+                        Text("Transportation").font(.system(size: 18)).bold().foregroundColor(.gray).padding(.top, 10)
+                        Spacer()
+                        Text(Date(), style: .date)
+                        Spacer()
+                        Button(action: {
+                            self.isShowingImagePicker.toggle()
+                        }, label: {
+                            Text("Upload Proof")
+                        }).sheet(isPresented: $isShowingImagePicker, content: {
+                            ImagePickerView(isPresented: self.$isShowingImagePicker, selectedImage: self.$tempImage)
+                        })
+                        Spacer()
+                        
+                    }
+                }
+
                 // Bar Graph
                 VStack{
                     Text("Personal Tracker").font(.title2).fontWeight(.bold).foregroundColor(.gray).frame(maxWidth: .infinity, alignment: .leading).padding(.horizontal, 24)
@@ -64,14 +102,22 @@ struct UserProfile: View {
                     
                     HStack (spacing: 12){
                         
-                        BarView(value: dataPoints[pickerSelectionItem][0])
-                        BarView(value: dataPoints[pickerSelectionItem][1])
-                        BarView(value: dataPoints[pickerSelectionItem][2])
-                        BarView(value: dataPoints[pickerSelectionItem][3])
-                        BarView(value: dataPoints[pickerSelectionItem][4])
+                        BarView(value: dataPoints[pickerSelectionItem][0], dataName: "Waste")
+                        BarView(value: dataPoints[pickerSelectionItem][1], dataName: "Fuel")
+                        BarView(value: dataPoints[pickerSelectionItem][2], dataName: "Electric")
+                        BarView(value: dataPoints[pickerSelectionItem][3], dataName: "Water")
+                        BarView(value: dataPoints[pickerSelectionItem][4], dataName: "Offsetting")
                     }.padding(.top, 24).animation(.default)
                 }
             }
+
+//                TabView{
+//                    ForEach(0..<5){ _ in
+//                        Image(uiImage: UIImage()).aspectRatio(contentMode: .fill)
+//                    }
+//                    .padding()
+//                }.frame(width: UIScreen.main.bounds.width).tabViewStyle(PageTabViewStyle())
+//
         }
     }
 }
@@ -79,6 +125,7 @@ struct UserProfile: View {
 struct BarView: View{
     
     var value: CGFloat
+    var dataName: String
     
     var body: some View {
         VStack{
@@ -87,7 +134,7 @@ struct BarView: View{
                 Capsule().frame(width: 30, height: 200).foregroundColor(Color(red: 0.94, green: 0.94, blue: 0.94))
                 Capsule().frame(width: 30, height: value).foregroundColor(Color(red: 0.80, green: 0.60, blue: 0.49))
             }
-            Text("Value").padding(.top, 8)
+            Text(dataName).padding(.top, 8)
         }
     }
 }

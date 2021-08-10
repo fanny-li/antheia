@@ -42,7 +42,7 @@ struct StartingPage : View {
             
                 VStack{
                     // Name of App
-                    Text("App Name").fontWeight(.heavy).font(.title).padding([.top, .bottom], 100).edgesIgnoringSafeArea(.all)
+                    Text("Carbon Zero").fontWeight(.heavy).font(.title).padding([.top, .bottom], 100).edgesIgnoringSafeArea(.all)
                 
                     Spacer()
                     // Image of Logo?

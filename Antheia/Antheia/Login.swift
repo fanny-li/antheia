@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct Login : View {
-    @State private var name = ""
+    @ObservedObject var userInfo = UserInfo()
     @State private var password = ""
     
 //    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
@@ -25,7 +25,7 @@ struct Login : View {
                     VStack(alignment: .leading, spacing: 8, content: {
                         Text("Email").font(.system(size: 20)).fontWeight(.bold).foregroundColor(Color(red: 0.35, green: 0.18, blue: 0.05)).kerning(1.0)
                         
-                        TextField("jamesdiamond@gmail.com", text: $name).font(.system(size: 18, weight: .semibold)).foregroundColor(.black)
+                        TextField("jamesdiamond@gmail.com", text: $userInfo.name).font(.system(size: 18, weight: .semibold)).foregroundColor(.black)
                         
                         Divider()
                     }).padding(.top, 40)
