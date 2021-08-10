@@ -9,25 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
    
-    @StateObject var viewRouter: ViewRouter
+   
     
     var body: some View {
         
-        switch viewRouter.currentPage {
-        case .startingPage:
-            StartingPage(viewRouter: ViewRouter())
-        case .signUpPage:
-            SignUp(viewRouter: ViewRouter())
-        case .loginPage:
-            Login()
-        }
+        StartingPage()
     }
 }
 
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(viewRouter: ViewRouter())
+        ContentView()
     }
 }
 
