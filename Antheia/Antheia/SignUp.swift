@@ -4,21 +4,19 @@
 //
 //  Created by Fanny Li on 7/23/21.
 //
-
 import SwiftUI
 
 struct SignUp : View {
     
-    @State private var name = ""
+    @ObservedObject var userInfo = UserInfo()
     @State private var email = ""
-    @State private var birthdate = Date()
     @State private var password = ""
     
     var body : some View {
-        NavigationView{
-            ZStack{
-                // Background
-                Rectangle().foregroundColor(Color(red: 0.98, green: 0.93, blue: 0.80)).edgesIgnoringSafeArea(.all)
+//        NavigationView{
+//            ZStack{
+//                // Background
+//                Rectangle().foregroundColor(Color(red: 0.98, green: 0.93, blue: 0.80)).edgesIgnoringSafeArea(.all)
                 VStack{
                     
                     Text("Sign Up").font(.system(size: 30)).fontWeight(.bold).foregroundColor(Color(red: 0.11, green: 0.26, blue: 0.20)).kerning(1.9).frame(maxWidth: .infinity, alignment: .topLeading)
@@ -27,7 +25,7 @@ struct SignUp : View {
                     VStack(alignment: .leading, spacing: 8, content: {
                         Text("Full Name").font(.system(size: 20)).fontWeight(.bold).foregroundColor(Color(red: 0.35, green: 0.18, blue: 0.05)).kerning(1.0)
                         
-                        TextField("James Diamond", text: $name).font(.system(size: 18, weight: .semibold)).foregroundColor(.black)
+                        TextField("James Diamond", text: $userInfo.name).font(.system(size: 18, weight: .semibold)).foregroundColor(.black)
                         
                         Divider()
                     }).padding(.top, 40)
@@ -45,8 +43,11 @@ struct SignUp : View {
                     HStack{
                         
                         VStack(alignment: .leading, spacing: 8, content: {
-                            Text("Birthdate").font(.system(size: 20)).fontWeight(.bold).foregroundColor(Color(red: 0.35, green: 0.18, blue: 0.05)).kerning(1.0)
-                            DatePicker("", selection: $birthdate, displayedComponents: .date)
+                            Text("Age").font(.system(size: 20)).fontWeight(.bold).foregroundColor(Color(red: 0.35, green: 0.18, blue: 0.05)).kerning(1.0)
+                            TextField("jamesdiamond@gmail.com", text: $userInfo.age
+                            ).font(.system(size: 18, weight: .semibold)).foregroundColor(.black)
+                            
+                            Divider()
                             
                             
                         }).padding(.top, 20)
@@ -59,34 +60,33 @@ struct SignUp : View {
                         }).padding(.top, 20)
                     }
                     
-                    NavigationLink(
-                        destination: Text("Destination"),
-                        label: {
-                            Text("Sign Up").font(.title3).fontWeight(.bold).foregroundColor(Color(red: 0.11, green: 0.26, blue: 0.20)).kerning(1.0).padding().background(Color(red: 0.91, green: 0.93, blue: 0.79).opacity(0.6)).cornerRadius(20).padding(.top, 40)
-                        })
+//                    NavigationLink(
+//                        destination: Text("Destination"),
+//                        label: {
+//                            Text("Sign Up").font(.title3).fontWeight(.bold).foregroundColor(Color(red: 0.11, green: 0.26, blue: 0.20)).kerning(1.0).padding().background(Color(red: 0.91, green: 0.93, blue: 0.79).opacity(0.6)).cornerRadius(20).padding(.top, 40)
+//                        })
                     
                     
+//                    HStack{
+//                        Text("Already Member?").fontWeight(.bold).foregroundColor(Color(red: 0.35, green: 0.18, blue: 0.05))
+//                        NavigationLink(
+//                            destination: Login().navigationBarBackButtonHidden(false),
+//                            label: {
+//                                Text("Login").fontWeight(.bold).foregroundColor(.gray)
+//                            })
+//                    }
+//
+//
                     
-                    
-                    
-                    
-                }.padding().frame(maxHeight: .infinity, alignment: .top)
-            }.overlay(
-                HStack{
-                    Text("Already Member?").fontWeight(.bold).foregroundColor(Color(red: 0.35, green: 0.18, blue: 0.05))
-                    NavigationLink(
-                        destination: Login().navigationBarBackButtonHidden(true),
-                        label: {
-                            Text("Login").fontWeight(.bold).foregroundColor(.gray)
-                        })
-                }
-                
-                ,alignment: .bottom
-            )
+                }.padding().padding(.bottom, 40).frame(maxHeight: 400, alignment: .top)
+//            }.overlay(
+//
+//                Image("trees").resizable().aspectRatio(contentMode: .fit)
+//                ,alignment: .bottom
+//            )
             
             
-            
-        }
+//        }
         
         
     }
