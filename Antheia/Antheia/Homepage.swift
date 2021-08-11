@@ -2,100 +2,127 @@
 //  Homepage.swift
 //  Antheia
 //
-//  Created by Kelly Ngoc Hoang  on 7/28/21.
+//  Created by Kelly Ngoc Hoang  on 8/5/21.
 //
 
 import SwiftUI
 import SwiftUICharts
 
+
 struct Homepage: View {
     
-    @State var data1: [Double] = [50, 50, 60, 40]
-    @State var showMenu = false
+    /// Conforms to CDSideMenuConfigurator protocol
+        func createConfiguration() -> CDSideMenuConfiguration {
+
+
+            /// Creating the left menu items, with SF Symbols for images
+            var menuItems = [CDSideMenuItem]()
+            menuItems.append(CDSideMenuItem(title: "Home", sfImage: "house", view: AnyView(HomeView())))
+
+            NotificationCenter.default.addObserver(forName: Notification.Name(CDSideMenuNotification.logout.rawValue),
+                                                   object: nil, queue: nil, using: self.didLogout)
+            
+            do {
+               
+                /// Choice #1 : Default configuration
+                return try CDSideMenuConfiguration(accountViewHidden: true, menuItems: menuItems)
+            
+                
+            }
+            catch {
+                print("CDSideMenu configuration failed. Please check your error below:")
+                print(error.localizedDescription)
+                print("CDSideMenu Default configuration loaded instead.")
+                return try! CDSideMenuConfiguration(accountViewHidden: true, menuItems: menuItems)
+            }
+        }
+        
+        /// Conforms to CDSideMenuConfigurator protocol
+        func didLogout(_ notification: Notification) {
+            print("User logged out! UserData will be in notification.object")
+        }
     
-    let greenStyle = ChartStyle(backgroundColor: .white,
-                                 foregroundColor: [ColorGradient(.yellow, .green)])
+
     var body: some View {
         
         ZStack {
-            
             // Background
-            Rectangle()
-                .fill(Color(#colorLiteral(red: 0.50974226, green: 0.9326363003, blue: 0.5485994581, alpha: 0.5950223962)))
-                .frame(width: 375, height: 830)
-                .opacity(0.5)
-            
-            VStack {
+            Rectangle().foregroundColor(Color(red: 253, green: 235, blue: 0.41)).opacity(0.51).ignoresSafeArea()
+              
+            VStack{
                 
-                HStack {
-                    // Hambutger Menu
-                    GeometryReader { geometry in ZStack(alignment: .leading) {
-                        Main_View(showMenu: self.$showMenu)
-                            .frame(width: geometry.size.width, height: geometry.size.height)
-                            .offset(x: self.showMenu ? geometry.size.width/2 : 0)
-                            .disabled(self.showMenu ? true : false)
-                            if self.showMenu {
-                                MenuView()
-                                    .frame(width: geometry.size.width/2)
-                            }
-                        }
-                    }
-                    
-                    // Total Usage
-                    Text("Total Usage: ---")
-                    
-                    Spacer()
-                }
-                .frame(height: 105.0)
+                // Hamburger Menu
+                NavigationLink(destination: CDSideMenuMainView()
+                    .environmentObject(createConfiguration()), label: {
+                                    Image("hamburger_menu")
+                                            .font(.system(.subheadline, design: .monospaced))
+                                })
+                Spacer()
+                    .frame(height: 10.0)
                 
-            
-
+                
                 // Current Pool
                 CardView {
-                    Text("Current Pool").font(.system(size: 24)).tracking(0.38)
-                    Text("$30").bold().font(.system(size: 36)).tracking(0.38)
-                }.frame(width: 300, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                
-                
-                // Piechart
-                CardView {
-                  ChartLabel("$$$", type: .subTitle)
-                    PieChart()
-                }
-                .data(data1)
-                .chartStyle(greenStyle)
-                .frame(width:  350, height: 350)
-//UIScreen.main.bounds.size.width
-
+                    Text("Current Pool")
+                        .font(.system(size: 24))
+                    Text("$50")
+                        .bold()
+                        .font(.system(size: 36))
+                        .tracking(0.38)
+                }.frame(width: 300, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+    
                 Spacer()
                 
-                // forest
-                Image("forest")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
+                Group {
+                    
+                    VStack {
+                        //Piechart
+                        Image("pie")
+                        
+                        HStack{
+                                Image("tag-fanny")
+                                Image("tag-erica")
+                                Image("tag-amy")
+                                Image("tag-kelly")
+                            }
+                    }
+                 
+                }
+                    
+                    
+                    
+                    Spacer()
+                    // Suggestion
+                    CardView {
+                        Text("What you can do today:")
+                            .bold()
+                            .font(.system(size: 24))
+                        Text("Cycle to work")
+                            .font(.system(size: 18))
+                        Text("Pack a water bottle")
+                            .font(.system(size: 18))
+                        Text("Eat local food")
+                            .font(.system(size: 18))
+
+                    }.frame(width: 380, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    
+                    
+                    
+                    // forest
+                    Image("forest")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 367, height: 109)
+                        .clipped()
                     .frame(width: 367, height: 109)
-                    .clipped()
-                .frame(width: 367, height: 109)
-                
+                }
                 
             }
         }
-        }
         
+       
     }
 
-struct Main_View: View {
-    
-    @Binding var showMenu: Bool
-    
-    var body: some View {
-        Button(action: {
-            self.showMenu = true
-        }) {
-            Image("hamburger_menu")
-        }
-    }
-}
 
 struct Homepage_Previews: PreviewProvider {
     static var previews: some View {
