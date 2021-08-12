@@ -62,16 +62,20 @@ struct CalculatorView: View {
     var body: some View {
         
         ScrollView {
-            //Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
+            
+            Group {
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+            }
+          
             
             VStack{
                 Text("Carbon Calculator Directions: for more accurate results on this carbon calculator be as specific about this month's information.")
