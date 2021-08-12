@@ -58,7 +58,7 @@ struct CalculatorView: View {
     @State var restaurant: Int = 0
     @State var organic: Int = 0
     
-    var image = #imageLiteral(resourceName: "circleprint")
+    var image = #imageLiteral(resourceName: "waterdrop")
     var body: some View {
         
         ScrollView {
