@@ -65,6 +65,15 @@ struct CalculatorView: View {
             Spacer()
             Spacer()
             VStack{
+                Group{
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                }
+                
                 Text("Carbon Calculator Directions: for more accurate results on this carbon calculator be as specific about this month's information.")
                     .frame(maxWidth: .infinity, alignment: .center)
                     .font(.custom("Verdana", size: 16))

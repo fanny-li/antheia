@@ -4,7 +4,6 @@
 //
 //  Created by Fanny Li on 7/23/21.
 //
-
 import SwiftUI
 
 struct SignUp : View {
@@ -45,7 +44,7 @@ struct SignUp : View {
                         
                         VStack(alignment: .leading, spacing: 8, content: {
                             Text("Age").font(.system(size: 20)).fontWeight(.bold).foregroundColor(Color(red: 0.35, green: 0.18, blue: 0.05)).kerning(1.0)
-                            TextField("jamesdiamond@gmail.com", text: $userInfo.age
+                            TextField("18", text: $userInfo.age
                             ).font(.system(size: 18, weight: .semibold)).foregroundColor(.black)
                             
                             Divider()

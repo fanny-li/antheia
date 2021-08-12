@@ -4,7 +4,6 @@
 //
 //  Created by Fanny Li on 7/24/21.
 //
-
 import SwiftUI
 
 struct StartingPage : View {
