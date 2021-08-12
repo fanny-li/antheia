@@ -62,7 +62,7 @@ struct CalculatorView: View {
     var body: some View {
         
         ScrollView {
-            Spacer()
+            //Spacer()
             Spacer()
             Spacer()
             Spacer()
