@@ -2,7 +2,7 @@
 //  Homepage.swift
 //  Antheia
 //
-//  Created by Kelly Ngoc Hoang  on 8/5/21.
+//  Created by Kelly Ngoc Hoang  on 7/29/21.
 //
 
 import SwiftUI
@@ -10,53 +10,13 @@ import SwiftUICharts
 
 
 struct Homepage: View {
-    
-    /// Conforms to CDSideMenuConfigurator protocol
-        func createConfiguration() -> CDSideMenuConfiguration {
-
-
-            /// Creating the left menu items, with SF Symbols for images
-            var menuItems = [CDSideMenuItem]()
-            menuItems.append(CDSideMenuItem(title: "Home", sfImage: "house", view: AnyView(HomeView())))
-
-            NotificationCenter.default.addObserver(forName: Notification.Name(CDSideMenuNotification.logout.rawValue),
-                                                   object: nil, queue: nil, using: self.didLogout)
-            
-            do {
-               
-                /// Choice #1 : Default configuration
-                return try CDSideMenuConfiguration(accountViewHidden: true, menuItems: menuItems)
-            
-                
-            }
-            catch {
-                print("CDSideMenu configuration failed. Please check your error below:")
-                print(error.localizedDescription)
-                print("CDSideMenu Default configuration loaded instead.")
-                return try! CDSideMenuConfiguration(accountViewHidden: true, menuItems: menuItems)
-            }
-        }
-        
-        /// Conforms to CDSideMenuConfigurator protocol
-        func didLogout(_ notification: Notification) {
-            print("User logged out! UserData will be in notification.object")
-        }
-    
 
     var body: some View {
-        
         ZStack {
             // Background
             Rectangle().foregroundColor(Color(red: 253, green: 235, blue: 0.41)).opacity(0.51).ignoresSafeArea()
               
             VStack{
-                
-                // Hamburger Menu
-                NavigationLink(destination: CDSideMenuMainView()
-                    .environmentObject(createConfiguration()), label: {
-                                    Image("hamburger_menu")
-                                            .font(.system(.subheadline, design: .monospaced))
-                                })
                 Spacer()
                     .frame(height: 10.0)
                 
@@ -88,8 +48,7 @@ struct Homepage: View {
                     }
                  
                 }
-                    
-                    
+                                    
                     
                     Spacer()
                     // Suggestion
@@ -122,7 +81,6 @@ struct Homepage: View {
         
        
     }
-
 
 struct Homepage_Previews: PreviewProvider {
     static var previews: some View {
