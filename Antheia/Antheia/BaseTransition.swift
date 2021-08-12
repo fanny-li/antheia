@@ -103,6 +103,9 @@ struct BaseTransition : View{
     
     struct BaseTransition_Preview: PreviewProvider {
         static var previews: some View {
-            BaseTransition()
+            Group {
+                BaseTransition()
+                BaseTransition()
+            }
         }
     }

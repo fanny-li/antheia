@@ -23,10 +23,11 @@ struct UserProfile: View {
     ]
     
     var body: some View {
-        ZStack{
-            Rectangle().foregroundColor(Color(red: 1.00, green: 0.91, blue: 0.84)).edgesIgnoringSafeArea(.all)
+        ScrollView{
+            ZStack{
+//                Rectangle().foregroundColor(Color(red: 1.00, green: 0.91, blue: 0.84)).edgesIgnoringSafeArea(.all)
             
-            VStack{
+                VStack{
                 // User Information
                 HStack(alignment: .top, content: {
                     Spacer()
@@ -108,17 +109,12 @@ struct UserProfile: View {
                         BarView(value: dataPoints[pickerSelectionItem][3], dataName: "Water")
                         BarView(value: dataPoints[pickerSelectionItem][4], dataName: "Offsetting")
                     }.padding(.top, 24).animation(.default)
-                }
+                    }
+                }.padding()
             }
-
-//                TabView{
-//                    ForEach(0..<5){ _ in
-//                        Image(uiImage: UIImage()).aspectRatio(contentMode: .fill)
-//                    }
-//                    .padding()
-//                }.frame(width: UIScreen.main.bounds.width).tabViewStyle(PageTabViewStyle())
-//
-        }
+            
+        }.background(Color(red: 1.00, green: 0.91, blue: 0.84))
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
